@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  django-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: django-app
+    container_name: django-app
+    volumes:
+      - ./app:/usr/src/app
+    ports:
+      - 8000:8000
